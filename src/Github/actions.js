@@ -60,7 +60,6 @@ export function fetchRepos() {
         dispatch(isFetchingRepos());
         fetchGithubRepos(getState().github.username)
             .then(resp => {
-                console.log('resp: ', resp)
                 if (resp.errors) {
                     dispatch(fetchReposFailure(resp.errors))
                 } else {

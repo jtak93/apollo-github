@@ -16,7 +16,6 @@ const initialState = {
 const githubReducer = (state = initialState, action) => {
     switch (action.type) {
         case IS_FETCHING_REPOS:
-            console.log('fetching repos')
             return {
                 ...state,
                 isFetchingRepos: true,
