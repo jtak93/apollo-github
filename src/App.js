@@ -16,7 +16,7 @@ class App extends Component {
           <ConnectedRouter history={history}>
             <div>
               <main>
-                <Route exact path="/" component={Github} />
+                <Route exact path="/apollo-github" component={Github} />
               </main>
             </div>
           </ConnectedRouter>
