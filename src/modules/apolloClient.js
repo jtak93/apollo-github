@@ -8,7 +8,7 @@ const httpLink = createHttpLink({
 });
 
 const authLink = setContext((_, { headers }) => {
-    // get the authentication token from local storage if it exists
+    // TODO: move token to ENV and also create new tokens when this one expires
     const token = '6c0229dcc0ba98e3736886bdc6a29215f15c2783'
     // return the headers to the context so httpLink can read them
     return {
