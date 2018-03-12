@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { push } from 'react-router-redux'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import Counter from '../Counter'
 
 class Home extends Component {
 
@@ -11,15 +10,14 @@ class Home extends Component {
       <div>
         <h1>Home</h1>
         <p>Welcome home!</p>
-        <button onClick={() => this.props.changePage()}>Go to about page via redux</button>
-        <Counter />
+        <button onClick={() => this.props.changePage()}>Go to github list page via redux</button>
       </div>
     );
   }
 }
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-  changePage: () => push('/about-us')
+  changePage: () => push('/github')
 }, dispatch)
 
 export default connect(
