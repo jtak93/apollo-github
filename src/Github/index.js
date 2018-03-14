@@ -10,7 +10,7 @@ class Github extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isTyping: false
+            stars: 0
         }
         this._debouncedFetchRepos = _.debounce(this._debouncedFetchRepos.bind(this), 500);
         this._handleInputChange = this._handleInputChange.bind(this);
@@ -36,6 +36,12 @@ class Github extends React.Component {
                 {
                     errors.length > 0 && !!this.props.username &&
                     <p style={{ color: 'red' }}>{errors[0].message} Please try a valid github username.</p>
+                }
+                {
+                    errors.length === 0 &&
+                    <div>
+                        <h4>Username: {this.props.username}</h4>
+                    </div>
                 }
                 {
                     errors.length === 0 &&
